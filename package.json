@@ -4,7 +4,8 @@
     "config": "^3.2.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-validator": "^6.1.1"
+    "express-validator": "^6.1.1",
+    "underscore": "^1.9.1"
   },
   "name": "pubg-tracker-api",
   "version": "1.0.0",

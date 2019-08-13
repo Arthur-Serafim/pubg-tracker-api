@@ -54,7 +54,7 @@ router.post(
 
       res.json(player)
     } catch (err) {
-      return res.status(400).json({ msg: 'Player not Found' })
+      return res.status(404).json({ msg: 'Player not Found' })
     }
   }
 )
