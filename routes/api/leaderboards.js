@@ -38,7 +38,7 @@ router.post(
 
       const response = await axios.get(endpoint, options)
       const data = response.data.included
-      res.json(data)
+      res.json(data.sort((a, b) => (a.attributes.rank > b.attributes.rank) ? 1 : -1))
     } catch (err) {
       console.error(err.message)
       res.status(400).json({ msg: 'Server Error' })
