@@ -34,10 +34,10 @@ router.post(
     }
 
     try {
-      let endpoint = `https://api.pubg.com/shards/steam/leaderboards/${game_mode}/?page[1]`
+      let endpoint = `https://api.pubg.com/shards/steam/leaderboards/${game_mode}`
 
       const response = await axios.get(endpoint, options)
-      const data = response.data.included
+      const data = response.data.data.relationships.players.data
       res.json(data.sort((a, b) => (a.attributes.rank > b.attributes.rank) ? 1 : -1))
     } catch (err) {
       console.error(err.message)
